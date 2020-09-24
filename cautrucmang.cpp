@@ -75,6 +75,33 @@ class list{
         }
       }
     }
+    bool isEmpty(){
+      if(size == 0){
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    bool isFull(){
+      if(size == Max){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    bool retrieve(int index){
+      if(index < 0||index > size){
+        cout<<"index not available"<<endl;
+      }
+      else{
+        return item[index-1];
+      }
+    }
+    int getSize(){
+      return size;
+    }
     void printList(){
       for(int i=0;i<size;i++){
         cout<<item[i]<<" "<<endl;
